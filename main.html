@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <script src="https://kit.fontawesome.com/f2ba1724e3.js" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+    <script src="login.js"></script>
+    <title>Universal Library</title>
+</head>
+<body>
+    <header>
+        <div id="main_header">
+            <div id="mainTitle">
+                <a href="main.html">
+                    MY MANGA
+                </a>
+            </div>
+            <div id="nav_wrapper">
+                <nav>
+                    <ul id="navbarMenu">
+                        <li class="navItem">
+                            <div class="searchButton">
+                                <a onclick="mysearch(event)">
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                    SEARCH
+                                </a>
+                            </div>
+                        </li>
+                        <li class="navItem">
+                            <div id="browse">
+                                <a href="browse.html">
+                                    <i class="fa-solid fa-book"></i>
+                                    BROWSE
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+                <div id="signIn_nav">
+                    <div id="welcome" style="display: block;">
+                        Hello
+                        <strong><span id="user"></span></strong>
+                    </div>
+                    <div id="signIn_main">
+                        <div id="signIn" class="headerButtons" style="display: block; width: auto;">
+                            <a id="signUp_link" href="login.html">
+                                <i class="fa-solid fa-right-to-bracket" style="vertical-align: middle;"></i>
+                                <span style="vertical-align: middle;">SIGN IN</span>
+                            </a>
+                        </div>
+                        <div id="bookmark" style="display: none;">
+                            <a href="">
+                                <i class="fa-solid fa-bookmark"></i>
+                                BOOKMARK
+                            </a>
+                        </div>
+                        <div id="logOut" style="display: none;">
+                            <a href="" onclick="logout()">
+                                <i class="fa-solid fa-right-from-bracket"></i>
+                                SIGN OUT
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <article id="searchItems">
+        <div id="searchContainer">
+            <form id="searchBox" method="get">
+                <input type="hidden">
+                <div class="searchBar">
+                    <label for="inputBox">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </label>
+                    <input type="text" name="search" id="inputBox" onkeyup="searchmanga()" placeholder="Search manga....">
+                </div>
+            </form>
+            <section id="listManga">
+                <ul style="height: 240px;margin: auto;overflow-x: hidden; overflow-y: auto;padding: 0px;">
+                     <li class="mangaItem">
+                        <div id="mangaSection">
+                            <a href="fff-class-trashero.html" title="FFF Class Trashero">
+                                <div class="cover">
+                                    <figure class="mangaCover">
+                                        <img src="pictures/fff-class-trashero-manhwas.jpg" alt="FFF-Class-Trashero">
+                                    </figure>
+                                </div>
+                            </a>
+                            <div class="mangaStat">
+                                <a href="fff-class-trashero.html" title="FFF Class Trashero">
+                                    <h4 class="mangaTitle">
+                                        FFF Class Trashero
+                                    </h4>
+                                    <strong>
+                                        1-engl-li
+                                    </strong>
+                                    <span>
+                                        Updated 2023-09-30
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                     </li>
+                     <li class="mangaItem">
+                        <div id="mangaSection">
+                            <a href="A-returners-magic-should-be-special.html" title="A Returner's Magic Should be Special">
+                                <div class="cover">
+                                    <figure class="mangaCover">
+                                        <img src="pictures/a-returner-s-magic-should-be-speci.png" alt="a-returner-s-magic-should-be-speci">
+                                    </figure>
+                                </div>
+                            </a>
+                            <div class="mangaStat">
+                                <a href="A-returners-magic-should-be-special.html" title="A Returner's Magic Should be Special">
+                                    <h4 class="mangaTitle">
+                                        A Returner's Magic Should be Special
+                                    </h4>
+                                    <strong>
+                                        1-engl-li
+                                    </strong>
+                                    <span>
+                                        Updated 2023-09-30
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                     </li>
+                     <li class="mangaItem">
+                        <div id="mangaSection">
+                            <a href="" title="trash count">
+                                <div class="cover">
+                                    <figure class="mangaCover">
+                                        <img src="pictures/trash count.png" alt="trash count">
+                                    </figure>
+                                </div>
+                            </a>
+                            <div class="mangaStat">
+                                <a href="" title="trash count">
+                                    <h4 class="mangaTitle">
+                                        Trash Count
+                                    </h4>
+                                    <strong>
+                                        171-engl-li
+                                    </strong>
+                                    <span>
+                                        Updated 2023-09-30
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                     </li>
+                     <li class="mangaItem">
+                        <div id="mangaSection">
+                            <a href="" title="Reincarnation of the battle god">
+                                <div class="cover">
+                                    <figure class="mangaCover">
+                                        <img src="pictures/Reincarnation of the battle god.jpeg" alt="Reincarnation of the battle god">
+                                    </figure>
+                                </div>
+                            </a>
+                            <div class="mangaStat">
+                                <a href="" title="Reincarnation of the battle god">
+                                    <h4 class="mangaTitle">
+                                        Reincarnation of the battle god
+                                    </h4>
+                                    <strong>
+                                        171-engl-li
+                                    </strong>
+                                    <span>
+                                        Updated 2023-09-30
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                     </li>
+                     <li class="mangaItem">
+                        <div id="mangaSection">
+                            <a href="" title="kill the hero">
+                                <div class="cover">
+                                    <figure class="mangaCover">
+                                        <img src="pictures/kill the hero.jpg" alt="kill the hero">
+                                    </figure>
+                                </div>
+                            </a>
+                            <div class="mangaStat">
+                                <a href="" title="kill the hero">
+                                    <h4 class="mangaTitle">
+                                        Kill the hero
+                                    </h4>
+                                    <strong>
+                                        171-engl-li
+                                    </strong>
+                                    <span>
+                                        Updated 2023-09-30
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                     </li>
+                     <li class="mangaItem">
+                        <div id="mangaSection">
+                            <a href="" title="reformation-of-the-deadbeat-noble">
+                                <div class="cover">
+                                    <figure class="mangaCover">
+                                        <img src="pictures/reformation-of-the-deadbeat-noble-23.png" alt="reformation-of-the-deadbeat-noble">
+                                    </figure>
+                                </div>
+                            </a>
+                            <div class="mangaStat">
+                                <a href="" title="reformation-of-the-deadbeat-noble">
+                                    <h4 class="mangaTitle">
+                                        Reformation of the deadbeat noble
+                                    </h4>
+                                    <strong>
+                                        171-engl-li
+                                    </strong>
+                                    <span>
+                                        Updated 2023-09-30
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                     </li>
+                     <li class="mangaItem">
+                        <div id="mangaSection">
+                            <a href="" title="return-to-player">
+                                <div class="cover">
+                                    <figure class="mangaCover">
+                                        <img src="pictures/return-to-player.jpg" alt="return-to-player">
+                                    </figure>
+                                </div>
+                            </a>
+                            <div class="mangaStat">
+                                <a href="" title="return-to-player">
+                                    <h4 class="mangaTitle">
+                                        Return to player
+                                    </h4>
+                                    <strong>
+                                        171-engl-li
+                                    </strong>
+                                    <span>
+                                        Updated 2023-09-30
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                     </li>    
+                     <li class="mangaItem">
+                        <div id="mangaSection">
+                            <a href="" title="rooftop-sword-masterz">
+                                <div class="cover">
+                                    <figure class="mangaCover">
+                                        <img src="pictures/rooftop-sword-masterz.jpg" alt="rooftop-sword-masterz">
+                                    </figure>
+                                </div>
+                            </a>
+                            <div class="mangaStat">
+                                <a href="" title="rooftop-sword-masterz">
+                                    <h4 class="mangaTitle">
+                                        Rooftop sword masterz
+                                    </h4>
+                                    <strong>
+                                        171-engl-li
+                                    </strong>
+                                    <span>
+                                        Updated 2023-09-30
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                     </li>      
+                     <li class="mangaItem">
+                        <div id="mangaSection">
+                            <a href="" title="solo-max-level-newbie">
+                                <div class="cover">
+                                    <figure class="mangaCover">
+                                        <img src="pictures/solo-max-level-newbie.jpg" alt="solo-max-level-newbie">
+                                    </figure>
+                                </div>
+                            </a>
+                            <div class="mangaStat">
+                                <a href="" title="solo-max-level-newbie">
+                                    <h4 class="mangaTitle">
+                                        Solo max level newbie
+                                    </h4>
+                                    <strong>
+                                        171-engl-li
+                                    </strong>
+                                    <span>
+                                        Updated 2023-09-30
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                     </li>             
+                </ul>
+            </section>
+            <div style="width: 100%;text-align: center;">
+                <a href="" style="position: relative;color: rgb(110, 110, 235);font-weight: bold;font-size: medium;">Search More</a>
+            </div>
+        </div>
+    </article>
+    <main style="height: auto !important;">
+        <section class="bg_img_intro">
+            <div class="intro">
+                <h3>Welcome to UNIVERAL LIBRARY!</h3>
+                <p>"Here at UNIVERSAL LIBRARY you can only read A-O-kay but still fun to read mangas"</p>
+                <p>Most Manga here are english translated manga's</p>
+            </div>
+        </section>
+        <article style="height: auto !important;">
+            <article class="sectionContainer">
+                <div class="sectionHeader">
+                    <h3>New Manga</h3>
+                    <p>New Manga Title's added here</p>
+                </div>
+                <div class="sectionBody" id="new-manga-section">
+                    <ul class="manga_list grid">
+                        <li class="manga_item">
+                            <a href="A-returners-magic-should-be-special.html" title="a-returner-s-magic-should-be-special">
+                                <figure class="mangacover">
+                                    <img src="pictures/a-returner-s-magic-should-be-speci.png" alt="a-returner-s-magic-should-be-special">
+                                </figure>
+                            </a>
+                            <h4 class="mangatitle">
+                                A returner's magic should be special
+                            </h4>
+                        </li>
+                        <li class="manga_item">
+                            <a href="" title="fff-class-trashero-manhwas">
+                                <figure class="mangacover">
+                                    <img src="pictures/fff-class-trashero-manhwas.jpg" alt="FFF-Class-Trashero">
+                                </figure>
+                            </a>
+                            <h4 class="mangatitle">
+                                FFF Class Trashero
+                            </h4>
+                        </li>
+                        <li class="manga_item">
+                            <a href="" title="kill the hero">
+                                <figure class="mangacover">
+                                    <img src="pictures/kill the hero.jpg" alt="kill the hero">
+                                </figure>
+                            </a>
+                            <h4 class="mangatitle">
+                                kill the hero
+                            </h4>
+                        </li>
+                        <li class="manga_item">
+                            <a href="" title="reformation-of-the-deadbeat-noble">
+                                <figure class="mangacover">
+                                    <img src="pictures/reformation-of-the-deadbeat-noble-23.png" alt="reformation-of-the-deadbeat-noble">
+                                </figure>
+                            </a>
+                            <h4 class="mangatitle">
+                                Reformation of the deadbeat noble
+                            </h4>
+                        </li>
+                        <li class="manga_item">
+                            <a href="" title="return-to-player">
+                                <figure class="mangacover">
+                                    <img src="pictures/return-to-player.jpg" alt="return-to-player">
+                                </figure>
+                            </a>
+                            <h4 class="mangatitle">
+                                Return to player
+                            </h4>
+                        </li>
+                        <li class="manga_item">
+                            <a href="" title="rooftop-sword-masterz">
+                                <figure class="mangacover">
+                                    <img src="pictures/rooftop-sword-masterz.jpg" alt="rooftop-sword-masterz">
+                                </figure>
+                            </a>
+                            <h4 class="mangatitle">
+                                Rooftop sword masterz
+                            </h4>
+                        </li>
+                        <li class="manga_item">
+                            <a href="" title="Reincarnation of the battle god">
+                                <figure class="mangacover">
+                                    <img src="pictures/Reincarnation of the battle god.jpeg" alt="Reincarnation of the battle god">
+                                </figure>
+                            </a>
+                            <h4 class="mangatitle">
+                                Reincarnation of the battle god
+                            </h4>
+                        </li>
+                        <li class="manga_item">
+                            <a href="" title="solo-max-level-newbie">
+                                <figure class="mangacover">
+                                    <img src="pictures/solo-max-level-newbie.jpg" alt="solo-max-level-newbie">
+                                </figure>
+                            </a>
+                            <h4 class="mangatitle">
+                                Solo max level newbie
+                            </h4>
+                        </li>
+                        <li class="manga_item">
+                            <a href="" title="the-player-hides-his-past">
+                                <figure class="mangacover">
+                                    <img src="pictures/the-player-hides-his-past.jpg" alt="the-player-hides-his-past">
+                                </figure>
+                            </a>
+                            <h4 class="mangatitle">
+                                The player hides his past
+                            </h4>
+                        </li>
+                        <li class="manga_item">
+                            <a href="" title="trash count">
+                                <figure class="mangacover">
+                                    <img src="pictures/trash count.png" alt="trash count">
+                                </figure>
+                            </a>
+                            <h4 class="mangatitle">
+                                Trash count
+                            </h4>
+                        </li>
+                    </ul>
+                </div>
+            </article>
+        </article>
+    </main>
+    <footer>
+    </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+        // Check the user's login status in local storage
+        const loggedIn = localStorage.getItem('loggedIn');
+        const username = localStorage.getItem('username');
+    
+        // Get the "Sign In" and "Profile" links
+        const signInLink = document.getElementById('signUp_link');
+        const profileLink = document.getElementById('bookmark');
+        const logout = document.getElementById('logOut');
+        const hello = document.getElementById('welcome');
+    
+        if (loggedIn === 'true') {
+            signIn.style.display = 'none';
+            signInLink.style.display = 'none';
+            profileLink.style.display = 'block';
+            logout.style.display = 'block';
+            hello.style.display = 'block';
+            user.textContent = `${username}`;
+        } else {
+            signIn.style.display = 'block';
+            signInLink.style.display = 'block';
+            profileLink.style.display = 'none';
+            logout.style.display = 'none';
+            hello.style.display = 'none';
+        }
+    });
+    </script>
+</body>
+</html>

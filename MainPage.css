@@ -1,0 +1,434 @@
+*{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    height: auto;
+    min-width: 95vw;
+    background: url(pictures/sample2-img-slider.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+header{
+    min-height: 80px;
+    max-height: auto;
+    width: 100%;
+    background-color: rgb(0, 0, 0, 0.7);
+}
+a{
+    text-decoration: none;
+    cursor: pointer;
+    color: white;
+}
+li{
+    list-style: none;
+}
+#main_header{
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    margin: auto;
+    flex-wrap: wrap;
+}
+#mainTitle{
+    height: auto;
+    width: auto;
+    font-size: 30px;
+    margin: auto 20px auto 0px;
+    outline: none;
+}
+#nav_wrapper{
+    height: 60px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: auto 0;
+    position: relative;
+    transition: all 0.5s ease-in;
+    font-size: 20px;
+}
+#nav_wrapper a:hover{
+    color: rgb(228, 196, 255);
+}
+nav{
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+    
+}
+#navbarMenu{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    
+}
+#navbarMenu{
+    width: auto;
+    height: 100%;
+    line-height: 60px;
+}
+.navItem{
+    margin-right: 20px;
+}
+.searchButton{
+    width: auto;
+    height: auto;
+}
+#signIn_nav{
+    height: 100%;
+    margin: auto 0;
+    display: flex;
+    flex-direction: column;
+    
+}
+#welcome{
+    width: 100%;
+    text-align: right;
+    color: #fff;
+}
+#signIn_main{
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    width: auto;
+    
+}
+#bookmark{
+    margin-right: 20px;
+}
+.headerButtons{
+    position: relative;
+    height: 30px;
+    width: auto;
+    margin: auto;
+    line-height: 30px;
+    padding: 0px 25px 10px 10px;
+    background:url(pictures/sample2-img-slider.jpg);
+    background-size: cover;
+    border-radius: 5px;
+    border: 5px solid transparent;
+    transition: all 0.3s ease-in;
+    background:linear-gradient(black,black) padding-box
+               ,linear-gradient(to bottom right, purple, violet, plum, pink) border-box;
+}
+.headerButtons:hover{
+    position: relative;
+    height: 30px;
+    width: auto;
+    margin: auto;
+    line-height: 30px;
+    padding: 0px 25px 10px 10px;
+    border: 5px solid rgba(0, 0, 0, 0.5);
+    background:url(pictures/sample2-img-slider.jpg);
+    background-size: cover;
+    border-radius: 5px;
+}
+
+
+#searchItems{
+    background-color: rgb(243, 243, 243);
+    width: 50%;
+    height: 300px;
+    position: relative;
+    margin: 20px auto 10px auto;
+    border-radius: 20px;
+    box-shadow: 10px 10px 5px rgb(161, 161, 236);
+    display: none;
+}
+#searchContainer{
+    height: 100%;
+    width: 80%;
+    margin: auto;
+}
+#searchBox{
+    margin-bottom: 5px;
+    border-radius: 10px;
+}
+.fa-solid{
+    margin: 0px 5px 0px 5px;
+}
+.searchBar{
+    width: 100%;
+    height: 30px;
+}
+.searchBar label{
+    height: auto;
+    width: auto;
+    line-height: 30px;
+}
+#inputBox{
+    height: 20px;
+    border: none;
+    outline: none;
+    width: 80%;
+    background-color: rgb(243, 243, 243);
+}
+.mangaItem{
+    height: 90px;
+    width: 100%;
+    position: relative;
+    margin-bottom: 5px;
+}
+#mangaSection{
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;  
+    
+    height: 100%;
+    width: 100%;
+}
+.cover{
+    height: 100%;
+    width: 80px;
+    position: relative;
+    display: block;
+}
+.mangaCover{
+    position: relative;
+    display: block;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+.mangaCover img{
+    height: 100%;
+    width: 100%;
+    border-radius: 4px;
+}
+.mangaStat h4{
+    margin: 0px 0px 10px 0px;
+    color: black;
+    font-size: 18px;
+}
+.mangaStat strong{
+    color: rgb(110, 110, 235);
+}
+.mangaStat span{
+    color: blueviolet;
+}
+.mangaStat{
+    margin-left: 10px;
+}
+.mangaTitle{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 300px;
+}
+
+
+
+#featured-intro{
+    min-height:400px;
+    width: 55%;
+    padding: 10px 2.5%;
+    margin: 20px auto;
+    box-shadow  : 5px 5px 8px rgba(0, 0, 0, 0.506)
+                , -5px -5px 8px rgba(255, 255, 255, 0.506);
+    border-radius: 10px;
+    background-color: rgba(109, 109, 109, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#featured-container{
+    min-height: 100%;
+    width: 100%;
+    padding: 0 20px;
+    border-radius: 5px;
+    box-shadow  :5px 5px 8px rgba(0, 0, 0, 0.506) inset
+                , -5px -5px 8px rgba(255, 255, 255, 0.506) inset;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#container{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+#featured-list{
+    height: 350px;
+    width: 35%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#featured-list p{
+    color: #fff;
+    margin: 0;
+}
+.image-container{
+    height: 250px;
+    width: 100%;
+    margin: auto;
+    position: relative;
+}
+.image{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    margin: auto;
+}
+.image img{
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+}
+
+
+
+@keyframes revealImage {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  
+  .first-image {
+    animation-name: revealImage;
+    animation-duration: 5s;
+  }
+  
+  .second-image {
+    animation-name: revealImage;
+    animation-duration: 5s;
+  }
+  .third-image {
+    animation-name: revealImage;
+    animation-duration: 5s;
+  }
+  .fourth-image {
+    animation-name: revealImage;
+    animation-duration: 5s;
+  }
+  .fifth-image {
+    animation-name: revealImage;
+    animation-duration: 5s;
+  }
+
+#intro-text{
+    height: 100%;
+    width: 100%;
+}
+#intro-container{
+    text-align: center;
+    height: 100%;
+    width: 90%;
+    margin: auto;
+    color: #fff;
+}
+#intro-container h1{
+    font-size: 30px;
+}
+#intro-container p{
+    font-size: 18px;
+}
+#intro-container a{
+    color: plum;
+}
+
+
+#manhwa-header{
+    width: 60%;
+    margin: auto auto 10px auto;
+    border:none;
+    border-left: 3px solid rgb(255, 255, 255);
+    color: #fff;
+}
+#manhwa-header h3, p{
+    margin: 0 0 5px 10px;
+}
+#manhwa_header h3{
+    font-size: 20px;
+}
+#manhwa-header p{
+    font-size: 18px;
+}
+
+
+#manhwa-container{
+    width: 60%;
+    margin: auto;
+}
+#manhwa-list{
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.manhwa{
+    height: 250px;
+    width: 150px;
+    background-color: #1f2129;
+    box-shadow: 2px 2px 4px black,
+            -2px -2px 4px white;
+            border-radius: 3px;
+    margin: 10px 0;
+}
+.cover{
+    height: 180px;
+    width: 100%;
+    overflow: hidden;
+}
+.cover img{
+    height: 180px;
+    width: 150px;
+    background-size: cover;
+    border-radius: 3px 3px 0 0;
+    transition: all 0.3s;
+}
+.cover:hover img{
+    transform: scale(1.3);
+}
+.info{
+    height: 70px;
+    width: 150px;
+}
+.title{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 150px;
+    margin-bottom: 3px;
+}
+.chapter{
+    padding: 1px 5px;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #1f2129;
+    width: fit-content;
+    margin: auto;
+}
+.info:last-child{
+    width: 100%;
+}
+footer{
+    height: 40px;
+    padding: 20px;
+    margin-top: 20px;
+    border-top: 1px solid #c5c5c5;
+    background-color: #fff;
+    color: #1f2129;
+    border-color: #e1e3e5;
+    box-shadow: 1px 1px 20px;
+}

@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="MainPage.css">
+    <script src="https://kit.fontawesome.com/f2ba1724e3.js" crossorigin="anonymous"></script>
+    <title>Universal Reader</title>
+</head>
+<body>
+    <header>
+        <div id="main_header">
+            <div id="mainTitle">
+                <a href="MainPage.html">
+                    Universal Reader
+                </a>
+            </div>
+            <div id="nav_wrapper">
+                <nav>
+                    <ul id="navbarMenu">
+                        <li class="navItem">
+                            <div class="searchButton">
+                                <a onclick="mysearch(event)">
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                    SEARCH
+                                </a>
+                            </div>
+                        </li>
+                        <li class="navItem">
+                            <div id="browse">
+                                <a href="browse.html">
+                                    <i class="fa-solid fa-book"></i>
+                                    BROWSE
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+                <div id="signIn_nav">
+                    <div id="welcome" style="display: block;">
+                        Hello
+                        <strong><span id="user"></span></strong>
+                    </div>
+                    <div id="signIn_main">
+                        <div id="signIn" class="headerButtons" style="display: block; width: auto;">
+                            <a id="signUp_link" href="login.html">
+                                <i class="fa-solid fa-right-to-bracket" style="vertical-align: middle;"></i>
+                                <span style="vertical-align: middle;">SIGN IN</span>
+                            </a>
+                        </div>
+                        <div id="bookmark" style="display: none;">
+                            <a href="bookmark.html">
+                                <i class="fa-solid fa-bookmark"></i>
+                                BOOKMARK
+                            </a>
+                        </div>
+                        <div id="logOut" style="display: none;">
+                            <a href="" onclick="logout()">
+                                <i class="fa-solid fa-right-from-bracket"></i>
+                                SIGN OUT
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <article id="searchItems">
+        <div id="searchContainer">
+            <form id="searchBox" method="get">
+                <input type="hidden">
+                <div class="searchBar">
+                    <label for="inputBox">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </label>
+                    <input type="text" name="search" id="inputBox" onkeyup="searchmanga()" placeholder="Search manga....">
+                </div>
+            </form>
+            <section id="listManga">
+                <ul style="height: 240px;margin: auto;overflow-x: hidden; overflow-y: auto;padding: 0px;">
+                     <li class="mangaItem">
+                        <div id="mangaSection">
+                            <a href="fff-class-trashero.html" title="FFF Class Trashero">
+                                <div class="cover">
+                                    <figure class="mangaCover">
+                                        <img src="pictures/fff-class-trashero-manhwas.jpg" alt="FFF-Class-Trashero">
+                                    </figure>
+                                </div>
+                            </a>
+                            <div class="mangaStat">
+                                <a href="fff-class-trashero.html" title="FFF Class Trashero">
+                                    <h4 class="mangaTitle">
+                                        FFF Class Trashero
+                                    </h4>
+                                    <strong>
+                                        1-engl-li
+                                    </strong>
+                                    <span>
+                                        Updated 2023-09-30
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                     </li>
+                     <li class="mangaItem">
+                        <div id="mangaSection">
+                            <a href="A-returners-magic-should-be-special.html" title="A Returner's Magic Should be Special">
+                                <div class="cover">
+                                    <figure class="mangaCover">
+                                        <img src="pictures/a-returner-s-magic-should-be-speci.png" alt="a-returner-s-magic-should-be-speci">
+                                    </figure>
+                                </div>
+                            </a>
+                            <div class="mangaStat">
+                                <a href="A-returners-magic-should-be-special.html" title="A Returner's Magic Should be Special">
+                                    <h4 class="mangaTitle">
+                                        A Returner's Magic Should be Special
+                                    </h4>
+                                    <strong>
+                                        1-engl-li
+                                    </strong>
+                                    <span>
+                                        Updated 2023-09-30
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                     </li>
+                     <li class="mangaItem">
+                        <div id="mangaSection">
+                            <a href="reincarnation-of-the-battle-god.html" title="Reincarnation of the battle god">
+                                <div class="cover">
+                                    <figure class="mangaCover">
+                                        <img src="pictures/Reincarnation of the battle god.jpeg" alt="Reincarnation of the battle god">
+                                    </figure>
+                                </div>
+                            </a>
+                            <div class="mangaStat">
+                                <a href="reincarnation-of-the-battle-god.html" title="Reincarnation of the battle god">
+                                    <h4 class="mangaTitle">
+                                        Reincarnation of the battle god
+                                    </h4>
+                                    <strong>
+                                        1-engl-li
+                                    </strong>
+                                    <span>
+                                        Updated 2023-09-30
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                     </li>
+                     <li class="mangaItem">
+                        <div id="mangaSection">
+                            <a href="solo-max-level-newbie.html" title="solo-max-level-newbie">
+                                <div class="cover">
+                                    <figure class="mangaCover">
+                                        <img src="pictures/solo-max-level-newbie.jpg" alt="solo-max-level-newbie">
+                                    </figure>
+                                </div>
+                            </a>
+                            <div class="mangaStat">
+                                <a href="solo-max-level-newbie.html" title="solo-max-level-newbie">
+                                    <h4 class="mangaTitle">
+                                        Solo max level newbie
+                                    </h4>
+                                    <strong>
+                                        1-engl-li
+                                    </strong>
+                                    <span>
+                                        Updated 2023-09-30
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                     </li>
+                     <li class="mangaItem">
+                        <div id="mangaSection">
+                            <a href="the-player-hides-his-past.html" title=" The player hides hides past">
+                                <div class="cover">
+                                    <figure class="mangaCover">
+                                        <img src="pictures/the-player-hides-his-past.jpg" alt="solo-max-level-newbie">
+                                    </figure>
+                                </div>
+                            </a>
+                            <div class="mangaStat">
+                                <a href="the-player-hides-his-past.html" title="The player hides hides past">
+                                    <h4 class="mangaTitle">
+                                        The player hides hides past
+                                    </h4>
+                                    <strong>
+                                        1-engl-li
+                                    </strong>
+                                    <span>
+                                        Updated 2023-09-30
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                     </li>              
+                </ul>
+            </section>
+            <div style="width: 100%;text-align: center;">
+                <a href="" style="position: relative;color: rgb(110, 110, 235);font-weight: bold;font-size: medium;">Search More</a>
+            </div>
+        </div>
+    </article>
+    <main style="height: auto !important;">
+        <div id="featured-intro">
+            <div id="featured-container">
+                <div id="container">
+                    <div id="featured-list">
+                        <div class="image-container">
+                            <div class="image first-image">
+                                <a href="">
+                                    <img src="pictures/fff-class-trashero-manhwas.jpg" alt="FFF-Class-Trashero">
+                                </a>
+                            </div>
+                            <div class="image second-image">
+                                <a href="">
+                                    <img src="pictures/a-returner-s-magic-should-be-speci.png" alt="a-returner-s-magic-should-be-speci">
+                                </a>
+                            </div>
+                            <div class="image third-image">
+                               <a href="">
+                                <img src="pictures/Reincarnation of the battle god.jpeg" alt="reincarnation of the battle god">
+                               </a>
+                            </div>
+                            <div class="image fourth-image">
+                                <a href="">
+                                    <img src="pictures/solo-max-level-newbie.jpg" alt="solo-max-level-newbie">
+                                </a>
+                            </div>
+                            <div class="image fifth-image">
+                                <a href="">
+                                    <img src="pictures/the-player-hides-his-past.jpg" alt="the-player-hides-his-past">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="intro-text">
+                        <div id="intro-container">
+                            <h1>
+                                Welcome!
+                            </h1>
+                            <p>
+                                Welcome to the Universal Reader! Where you can read manhwa's of my choice.
+                            </p>
+                            <p>
+                                This site is made by Cris Roniel Ibali to be the final project for finals. 
+                            </p>
+                            <p>
+                                Be sure to sign up to be able to bookmark your favorite manhwa's. Click here to sign up "
+                                <a href="login.html">
+                                    Sign-Up!
+                                </a> 
+                                ".
+                            </p>
+                            <p>
+                                Down below are the list of manhwa's you can read, enjoy!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="manhwa-header">
+            <h3>New Manga</h3>
+            <p>New Manga Title's added here</p>
+        </div>
+        <div id="manhwa-container">
+            <div id="manhwa-list">
+                <div class="manhwa">
+                    <a href="fff-class-trashero.html">
+                        <div class="cover">
+                            <img src="pictures/fff-class-trashero-manhwas.jpg" alt="">
+                        </div>
+                    </a>
+                    <div class="info">
+                        <a href="fff-class-trashero.html">
+                            <div class="title">
+                                FFF class trashero
+                            </div>
+                        </a>
+                        <a href="fff-class-trashero.html">
+                            <div class="chapter">
+                                Chapter 1
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="manhwa">
+                    <a href="A-returners-magic-should-be-special.html">
+                        <div class="cover">
+                            <img src="pictures/a-returner-s-magic-should-be-speci.png" alt="">
+                        </div>
+                    </a>
+                    <div class="info">
+                        <a href="A-returners-magic-should-be-special.html">
+                            <div class="title">
+                                A returner's magic should be special
+                            </div>
+                        </a>
+                        <a href="A-returners-magic-should-be-special.html">
+                            <div class="chapter">
+                                Chapter 1
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="manhwa">
+                    <a href="reincarnation-of-the-battle-god.html">
+                        <div class="cover">
+                            <img src="pictures/Reincarnation of the battle god.jpeg" alt="">
+                        </div>
+                    </a>
+                    <div class="info">
+                        <a href="reincarnation-of-the-battle-god.html">
+                            <div class="title">
+                                Reincarnation of the battle god
+                            </div>
+                        </a>
+                        <a href="reincarnation-of-the-battle-god.html">
+                            <div class="chapter">
+                                Chapter 1
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="manhwa">
+                    <a href="solo-max-level-newbie.html">
+                        <div class="cover">
+                            <img src="pictures/solo-max-level-newbie.jpg" alt="">
+                        </div>
+                    </a>
+                    <div class="info">
+                        <a href="solo-max-level-newbie.html">
+                            <div class="title">
+                                Solo max level newbie
+                            </div>
+                        </a>
+                        <a href="solo-max-level-newbie.html">
+                            <div class="chapter">
+                                Chapter 1
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="manhwa">
+                    <a href="the-player-hides-his-past.html">
+                        <div class="cover">
+                            <img src="pictures/the-player-hides-his-past.jpg" alt="">
+                        </div>
+                    </a>
+                    <div class="info">
+                        <a href="the-player-hides-his-past.html">
+                            <div class="title">
+                                The player hides his past
+                            </div>
+                        </a>
+                        <a href="the-player-hides-his-past.html">
+                            <div class="chapter">
+                                Chapter 1
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+    </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+        const loggedIn = localStorage.getItem('loggedIn');
+        const username = localStorage.getItem('username');
+    
+        const signInLink = document.getElementById('signUp_link');
+        const profileLink = document.getElementById('bookmark');
+        const logout = document.getElementById('logOut');
+        const hello = document.getElementById('welcome');
+    
+        if (loggedIn === 'true') {
+            signIn.style.display = 'none';
+            signInLink.style.display = 'none';
+            profileLink.style.display = 'block';
+            logout.style.display = 'block';
+            hello.style.display = 'block';
+            user.textContent = `${username}`;
+        } else {
+            signIn.style.display = 'block';
+            signInLink.style.display = 'block';
+            profileLink.style.display = 'none';
+            logout.style.display = 'none';
+            hello.style.display = 'none';
+        }
+    });
+
+    const imageContainer = document.querySelector('.image-container');
+        const images = document.querySelectorAll('.image');
+        let currentImageIndex = 0;
+
+    document.addEventListener("DOMContentLoaded",function(){
+        showNextImage();
+    });
+
+        function showNextImage() {
+            const currentImage = images[currentImageIndex];
+            currentImage.classList.remove('first-image', 'second-image', 'third-image', 'fourth-image', 'fifth-image');
+
+            currentImageIndex = (currentImageIndex + 1) % images.length;
+            const nextImage = images[currentImageIndex];
+
+            switch (currentImageIndex) {
+                case 0:
+                    nextImage.classList.add('first-image');
+                    break;
+                case 1:
+                    nextImage.classList.add('second-image');
+                    break;
+                case 2:
+                    nextImage.classList.add('third-image');
+                    break;
+                case 3:
+                    nextImage.classList.add('fourth-image');
+                    break;
+                case 4:
+                    nextImage.classList.add('fifth-image');
+                    break;
+            }
+        }
+
+        images.forEach((image, index) => {
+            if (index !== 0) {
+                image.style.opacity = '0';
+            }
+        });
+
+        setInterval(() => {
+            showNextImage();
+        }, 5000);
+    </script>
+</body>
+</html>

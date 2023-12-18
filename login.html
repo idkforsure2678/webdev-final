@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
+    <script src="login.js"></script>
+    <script src="https://kit.fontawesome.com/f2ba1724e3.js" crossorigin="anonymous"></script>
+    <title>Log in</title>
+</head>
+<body>
+    <div id="form_container">
+        <div class="old-login-box" id="logIn_box" style="display: block;">
+            <div id="logIn_bg">
+                <a href="MainPage.html">
+                    <h3>MY MANGA</h3>
+                </a>
+            </div>
+            <form onsubmit="login(event)" class="logIn_form" method="post" action="">
+                <span class="login_title">SIGN IN</span>
+                <div class="login_user">
+                    <label for="username">
+                        <i id="user" class="fa-solid fa-envelope"></i>
+                    </label>
+                    <input name="username" autocomplete="username" placeholder="username" class="inputUser" id="username" type="text">
+                </div>
+                <br>
+                <div class="login_password">
+                    <label for="password">
+                        <i id="pass" class="fa-solid fa-lock"></i>
+                    </label>
+                    <input name="password" placeholder="password" class="inputpassword" id="password" type="password">
+                </div>
+                <br>
+                <div class="login_button">
+                    <button type="submit" class="login-button">
+                        SIGN IN
+                    </button>
+                </div>
+                <div class="switch" style="text-align: center;">
+                    Haven't signed up yet?
+                    <a onclick="signUpPage()">Sign Up</a>
+                </div>
+            </form>
+        </div>
+        <div class="old-signUp-box" id="signUp_box" style="display: block;">
+            <div id="signUp_bg">
+                <a href="MainPage.html">
+                    <h3>MY MANGA</h3>
+                </a>
+            </div>
+            <form onsubmit="signup(event)" class="signUp_form" method="get" action="">
+                <span class="signUp_title">SIGN UP</span>
+                <div class="signUp_user">
+                    <label for="signup-username">
+                        <i id="user" class="fa-solid fa-envelope"></i>
+                    </label>
+                    <input autocomplete="username" placeholder="username" class="inputUser" id="signup-username" type="text">
+                </div>
+                <br>
+                <div class="signUp_password">
+                    <label for="signup-password">
+                        <i id="pass" class="fa-solid fa-lock"></i>
+                    </label>
+                    <input placeholder="password" class="inputpassword" id="signup-password" type="password">
+                </div>
+                <br>
+                <div class="signUp_comfirm_password">
+                    <label for="signup-comfirm_password">
+                        <i id="pass" class="fa-solid fa-lock"></i>
+                    </label>
+                    <input placeholder="confirm password" class="inputpassword" id="signup-comfirm_password" type="password">
+                </div>
+                <br>
+                <div class="signUp_button">
+                    <button type="submit" class="signUp-button">
+                        SIGN UP
+                    </button>
+                </div>
+                <div class="switch" style="text-align: center;">
+                    Already have an account?
+                    <a onclick="loginPage()">Log In</a>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="login.js"></script>
+</body>
+</html>

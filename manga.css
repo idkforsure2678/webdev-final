@@ -1,0 +1,410 @@
+*{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    height: auto;
+    min-width: 95vw;
+    background: url(pictures/sample2-img-slider.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+header{
+    min-height: 80px;
+    max-height: auto;
+    width: 100%;
+    background-color: rgb(0, 0, 0, 0.7);
+}
+a{
+    text-decoration: none;
+    cursor: pointer;
+    color: white;
+}
+li{
+    list-style: none;
+}
+#main_header{
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    margin: auto;
+    flex-wrap: wrap;
+}
+#mainTitle{
+    height: auto;
+    width: auto;
+    font-size: 30px;
+    margin: auto 20px auto 0px;
+    outline: none;
+    color: rgb(255, 255, 255);
+}
+#nav_wrapper{
+    height: 60px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: auto 0;
+    position: relative;
+    text-shadow: 5px 5px 5px rgb(208, 161, 236) ;
+    transition: all 0.5s ease-in;
+    font-size: 20px;
+}
+#nav_wrapper a:hover{
+    text-shadow: 5px 5px 5px rgb(208, 161, 236) ;
+    color: rgb(228, 196, 255);
+}
+nav{
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+    
+}
+#navbarMenu{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    
+}
+#navbarMenu{
+    width: auto;
+    height: 100%;
+    line-height: 60px;
+}
+.navItem{
+    margin-right: 20px;
+}
+.searchButton{
+    width: auto;
+    height: auto;
+}
+#signIn_nav{
+    height: 100%;
+    margin: auto 0;
+    display: flex;
+    flex-direction: column;
+    
+}
+#welcome{
+    width: 100%;
+    text-align: right;
+    color: #fff;
+}
+#signIn_main{
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    width: auto;
+    
+}
+#bookmark{
+    margin-right: 20px;
+}
+.headerButtons{
+    position: relative;
+    height: 30px;
+    width: auto;
+    margin: auto;
+    line-height: 30px;
+    padding: 0px 25px 10px 10px;
+    background:url(pictures/sample2-img-slider.jpg);
+    background-size: cover;
+    border-radius: 5px;
+    border: 5px solid transparent;
+    transition: all 0.3s ease-in;
+    background:linear-gradient(black,black) padding-box
+               ,linear-gradient(to bottom right, purple, violet, plum, pink) border-box;
+}
+.headerButtons:hover{
+    position: relative;
+    height: 30px;
+    width: auto;
+    margin: auto;
+    line-height: 30px;
+    padding: 0px 25px 10px 10px;
+    border: 5px solid rgba(0, 0, 0, 0.5);
+    background:url(pictures/sample2-img-slider.jpg);
+    background-size: cover;
+    border-radius: 5px;
+}
+
+
+#searchItems{
+    background-color: rgb(243, 243, 243);
+    width: 50%;
+    height: 300px;
+    position: relative;
+    margin: 20px auto 10px auto;
+    border-radius: 20px;
+    box-shadow: 10px 10px 5px rgb(161, 161, 236);
+    display: none;
+}
+#searchContainer{
+    height: 100%;
+    width: 80%;
+    margin: auto;
+}
+#searchBox{
+    margin-bottom: 5px;
+    border-radius: 10px;
+}
+.fa-solid{
+    margin: 0px 5px 0px 5px;
+}
+.searchBar{
+    width: 100%;
+    height: 30px;
+}
+.searchBar label{
+    height: auto;
+    width: auto;
+    line-height: 30px;
+}
+#inputBox{
+    height: 20px;
+    border: none;
+    outline: none;
+    width: 80%;
+    background-color: rgb(243, 243, 243);
+}
+.mangaItem{
+    height: 90px;
+    width: 100%;
+    position: relative;
+    margin-bottom: 5px;
+}
+#mangaSection{
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;  
+    
+    height: 100%;
+    width: 100%;
+}
+.cover{
+    height: 100%;
+    width: 80px;
+    position: relative;
+    display: block;
+}
+.mangaCover{
+    position: relative;
+    display: block;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+.mangaCover img{
+    height: 100%;
+    width: 100%;
+    border-radius: 4px;
+}
+.mangaStat h4{
+    margin: 0px 0px 10px 0px;
+    color: black;
+    font-size: 20px;
+}
+.mangaStat strong{
+    color: rgb(110, 110, 235);
+}
+.mangaStat span{
+    color: blueviolet;
+}
+.mangaStat{
+    margin-left: 10px;
+}
+.mangaTitle{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 300px;
+}
+
+
+.manga-front{
+    position: relative;
+    height: 400px;
+    width: 60%;
+    margin: 20px auto;
+    background-color: transparent;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.cover-container{
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cover-container img{
+    height: 90%;
+    width: 95%;
+    border-radius: 3px;
+}
+.info-container{
+    width: 640px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cover-info{
+    height: 90%;
+    width: 100%;
+}
+.title{
+    height: 48px;
+    margin-bottom: 10px;
+}
+.title p{
+    margin: 0;
+    line-height: 50px;
+    font-weight: bold;
+    font-size: 30px;
+    color: #fff;
+}
+.extra-container{
+    height: 300px;
+    width: 100%;
+}
+.stats-container{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+    .stats-container p{
+        margin: 0 0 10px 0;
+        color: #fff;
+    }
+    .manga-text{
+        min-height: 80px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+        .stat{
+        border-right: 2px solid #c5c5c5;
+        width: 25%;
+        height: 70px;
+        text-align: center;
+        }
+        .stat:first-child{
+            border-left: 2px solid #c5c5c5;
+        }
+        .stat:last-child{
+            border-right: 2px solid #c5c5c5;
+        }
+        .stat h5{
+            color: #fff;
+            margin: 0;
+            font-size: 20px;
+        }
+        .stat p{
+            margin: 10px 0 0 0;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .stat:nth-child(4) p{
+            color: #d41d1d;
+        }
+    .manga-categories{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-evenly;
+        max-height: 100px;
+    }
+        .manga-categories span{
+            padding: 10px;
+            background-color: rgb(40, 40, 221);
+            border-radius: 3px;
+            margin: 5px 0 0 5px;
+            color: #fff;
+            cursor: pointer;
+        }
+    .user-container{
+        margin: 10px 0 0 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+        .user-container button{
+        padding: 10px;
+        border-radius: 5px;
+        outline: none;
+        border: none;
+        background-color: plum;
+        cursor: pointer;
+        transition: all 0.5s;
+        justify-self: end;
+        align-self: flex-end;
+        }
+.About{
+    height: auto;
+    padding: 10px 0;
+    width: 60%;
+    margin: auto;
+    color: #fff;
+    background-color: #1f21295e;
+    border-radius: 5px;
+    border: 3px dotted plum;
+}
+    .About p:nth-child(1){
+        width: 80px;
+        margin: 0 0 0 43px;
+        border-bottom: 2px solid #c5c5c5;
+    }
+    .about{
+        height: 100%;
+        width: 90%;
+        margin: auto;
+    }
+.chapters{
+    height: 300px;
+    width: 60%;
+    margin:20px auto 30px auto;
+    background-color: #1f2129a5;
+    border-radius: 3px;
+    position: relative;
+    padding: 20px 0 0 0;
+    border: 3px dotted plum;
+}
+    .ch{
+        width: 90px;
+        color: white;
+        margin: 0 0 10px 43px;
+        border-bottom: 2px solid #c5c5c5;
+    }
+    .chapters ul{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+        grid-column-gap: 47px;
+        grid-row-gap: 0px;
+    }
+    .chapter{
+        border: 1px solid white;
+    }
+    
+
+
+footer{
+    height: 40px;
+    padding: 20px;
+    margin-top: 20px;
+    border-top: 1px solid #c5c5c5;
+    background-color: #fff;
+    color: #1f2129;
+    border-color: #e1e3e5;
+    box-shadow: 1px 1px 20px;
+}
